@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.4d2a9471.css",
+    "main.js": "/portfolio/static/js/main.c6f1d00c.js",
+    "static/media/atomic.png": "/portfolio/static/media/atomic.881038bacfb206000f76.png",
+    "static/media/linux.png": "/portfolio/static/media/linux.a9e9cfe7d82d7230a654.png",
+    "static/media/figma.png": "/portfolio/static/media/figma.c34f0d4018ce7e9bdabb.png",
+    "static/media/leaf.png": "/portfolio/static/media/leaf.9bf014508e8b870050e5.png",
+    "static/media/web-design.png": "/portfolio/static/media/web-design.8c870c797d9dc73ddfc5.png",
+    "static/media/nodejs.png": "/portfolio/static/media/nodejs.fbf4130e62177e76607d.png",
+    "static/media/person.svg": "/portfolio/static/media/person.96424ef20982eee7d590811fdcea892c.svg",
+    "static/media/redux.png": "/portfolio/static/media/redux.a88b9ca5dbaa8ab33b87.png",
+    "static/media/python.png": "/portfolio/static/media/python.597394c4e47267b862fc.png",
+    "index.html": "/portfolio/index.html",
+    "main.4d2a9471.css.map": "/portfolio/static/css/main.4d2a9471.css.map",
+    "main.c6f1d00c.js.map": "/portfolio/static/js/main.c6f1d00c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4d2a9471.css",
+    "static/js/main.c6f1d00c.js"
+  ]
+}
