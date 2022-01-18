@@ -1,0 +1,47 @@
+.container {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  margin: 5rem auto;
+}
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.box {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 2rem;
+  border-radius: 10px;
+  width: 30%;
+  padding: 2rem 3rem;
+}
+
+.box img {
+  width: 100%;
+}
+.box p {
+  white-space: pre-wrap;
+}
+
+.scroll_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 80%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.scroll {
+  font-size: 18px;
+  font-family: Zilla Slab;
+  margin-top: -50px;
+  width: 100%;
+}

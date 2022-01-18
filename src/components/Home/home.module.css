@@ -1,0 +1,79 @@
+.container {
+  height: 80vh;
+  width: 80%;
+}
+
+.sub_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.container h1 {
+  margin: 0;
+  font-size: 50px;
+  font-family: righteous;
+}
+.container h2 {
+  margin-top: 0.3rem;
+}
+
+.social_media {
+  display: flex;
+  justify-content: space-around;
+  width: 20%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.rotate_button {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.rotate_button .rotate_button_face,
+.rotate_button .rotate_button_face_back {
+  position: absolute;
+  display: block;
+  border: 1px solid #1890ff;
+  transition: all 0.5s;
+  color: #1890ff;
+  text-decoration: none;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 4px;
+  font-family: rajdhani;
+  font-weight: bold;
+}
+.rotate_button .rotate_button_face {
+  background-color: inherit;
+  transform: translateZ(15px);
+}
+.rotate_button .rotate_button_face_back {
+  background-color: #1890ff;
+  color: #fff;
+  border: 1px solid #1890ff;
+  transform: rotateX(-90deg) translateZ(15px);
+}
+.rotate_button:hover {
+  transform: rotateX(90deg);
+}
+
+@media only screen and (max-width: 550px) {
+  .sub_container {
+    width: 350px;
+  }
+
+  .container h1 {
+    margin: 0;
+    font-size: 45px;
+  }
+  .container h2 {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,170 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container h2 {
+  font-size: 50px;
+  font-family: righteous;
+  color: #1890ff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.sub_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 50%;
+  text-align: left;
+  padding-bottom: 1rem;
+}
+.contact {
+  width: 40%;
+  text-align: left;
+  padding-left: 3rem;
+}
+.contact h3 {
+  font-family: righteous;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+.contact p {
+  font-weight: bold;
+  margin: 0;
+  color: rgb(218, 218, 218);
+  cursor: pointer;
+}
+.contact p:hover {
+  color: #1890ff;
+}
+
+.container input {
+  padding: 1rem 1rem;
+  font-family: rajdhani;
+  background: #172036;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  margin-bottom: 1rem;
+  border: none;
+  width: 43%;
+}
+.container textarea {
+  padding: 1rem;
+  font-family: rajdhani;
+  background: #172036;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  margin-bottom: 1rem;
+  border: none;
+  width: 100%;
+  resize: none;
+  height: 200px;
+  box-sizing: border-box;
+}
+
+.container input:focus,
+textarea:focus {
+  border: solid 1px #1890ff;
+}
+
+.form_sub_container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-flex;
+  height: 40px;
+  width: 150px;
+  border: 2px solid #1890ff;
+  margin: 20px 20px 20px 20px;
+  color: #1890ff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: righteous;
+}
+
+.form a {
+  color: #1890ff;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.button_6 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button_6 a {
+  position: relative;
+  transition: all 0.45s ease-Out;
+}
+
+.spin {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  left: 70px;
+  top: 20px;
+  transform: rotate(0deg);
+  background: none;
+  position: absolute;
+  transition: all 0.5s ease-Out;
+}
+
+.button_6:hover .spin {
+  width: 200%;
+  height: 500%;
+  opacity: 1;
+  left: -70px;
+  top: -70px;
+  background: #1890ff;
+  transform: rotate(80deg);
+}
+
+.button_6:hover a {
+  color: #fff;
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    width: 95%;
+  }
+  .sub_container {
+    flex-direction: column;
+  }
+  .form {
+    width: 100%;
+  }
+  .contact {
+    width: 100%;
+    padding-left: 0;
+    margin-bottom: 3rem;
+  }
+  .container h2 {
+    font-size: 35px;
+    letter-spacing: 2px;
+  }
+  .container input {
+    width: 100%;
+  }
+
+  .form button {
+    padding: 5px 1.5rem;
+    font-size: 13px;
+  }
+}

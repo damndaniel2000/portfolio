@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.container h3:hover {
+  color: #1890ff;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    width: 90%;
+  }
+  .container h3 {
+    font-size: 15px;
+  }
+}

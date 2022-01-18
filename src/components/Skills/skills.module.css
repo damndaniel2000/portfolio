@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 25%;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+  border-radius: 10px;
+}
+.box img {
+  width: 100px;
+}
+
+.box h3 {
+  font-family: righteous;
+  font-size: 20px;
+}
+
+.box:hover {
+  background: #172036;
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    width: 95%;
+    margin-top: 2rem;
+  }
+  .box img {
+    width: 80px;
+  }
+  .box h3 {
+    font-size: 16px;
+  }
+  .box {
+    margin-bottom: 1rem;
+    width: 30%;
+    padding: 1rem 0;
+  }
+}
