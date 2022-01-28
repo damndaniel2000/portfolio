@@ -62,16 +62,23 @@ const ContactMe = () => {
             </div>
             <div className={styles.contact}>
               <h3> Phone Number </h3>
-              <p onClick={() => window.open("tel:+919930892362", "_self")}>
+              <p
+                title="Call +91 9930892362"
+                onClick={() => window.open("tel:+919930892362", "_self")}
+              >
                 {" "}
                 +91 9930892362{" "}
               </p>
-              <p onClick={() => window.open("tel:+971561832073", "_self")}>
+              <p
+                title="Call +971 561832073"
+                onClick={() => window.open("tel:+971561832073", "_self")}
+              >
                 {" "}
                 +971 561832073{" "}
               </p>
               <h3> Email ID </h3>
               <p
+                title="Send an email"
                 onClick={() =>
                   window.open("mailto:dsouzaian2020@gmail.com", "_self")
                 }
@@ -81,6 +88,7 @@ const ContactMe = () => {
               </p>
               <h3> Address </h3>
               <p
+                title="View on Maps"
                 onClick={() =>
                   window.open("https://goo.gl/maps/ai4jtP2jQUatV3es9")
                 }

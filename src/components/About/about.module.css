@@ -22,8 +22,9 @@
   color: #1890ff;
 }
 
-.sub_container p {
-  font-size: 20px;
+.sub_container a {
+  color: #1890ff;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 550px) {

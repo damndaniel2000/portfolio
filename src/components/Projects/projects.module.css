@@ -3,7 +3,7 @@
   overflow-x: auto;
   white-space: nowrap;
   scrollbar-width: none;
-  margin: 5rem auto;
+  margin: 2rem auto;
 }
 .container::-webkit-scrollbar {
   display: none;
@@ -14,12 +14,18 @@
   vertical-align: top;
   margin: 0 2rem;
   border-radius: 10px;
-  width: 30%;
-  padding: 2rem 3rem;
+  width: 35%;
+  height: 550px;
+  background: #172036;
+  border-radius: 10px;
+  position: relative;
 }
 
 .box img {
   width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 300px;
 }
 .box p {
   white-space: pre-wrap;
@@ -41,7 +47,68 @@
 
 .scroll {
   font-size: 18px;
-  font-family: Zilla Slab;
-  margin-top: -50px;
   width: 100%;
+}
+
+.button_group {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.button {
+  display: inline-flex;
+  height: 30px;
+  width: 100px;
+  border: 2px solid #1890ff;
+  margin: 20px 20px 20px 20px;
+  color: #1890ff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.6em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-weight: 600;
+}
+
+.button_6 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button_6 a {
+  position: relative;
+  transition: all 0.45s ease-Out;
+  color: #1890ff;
+  text-decoration: none;
+}
+
+.spin {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  left: 70px;
+  top: 20px;
+  transform: rotate(0deg);
+  background: none;
+  position: absolute;
+  transition: all 0.5s ease-Out;
+}
+
+.button_6:hover .spin {
+  width: 200%;
+  height: 500%;
+  opacity: 1;
+  left: -70px;
+  top: -70px;
+  background: #1890ff;
+  transform: rotate(80deg);
+}
+
+.button_6:hover a {
+  color: #fff;
 }

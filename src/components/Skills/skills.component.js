@@ -11,11 +11,16 @@ import redux from "../../images/redux.png";
 import mongo from "../../images/leaf.png";
 import design from "../../images/web-design.png";
 
-const Skills = () => {
-  const transition = useSpring({
+const Skills = ({ nav }) => {
+  const forwardTransition = useSpring({
     transform: "translateX(0%)",
-    from: { transform: "translateX(30%)" },
+    from: { transform: "translateX(50%)" },
   });
+  const backwardTransition = useSpring({
+    transform: "translateX(0%)",
+    from: { transform: "translateX(-50%)" },
+  });
+  const transition = !nav ? backwardTransition : forwardTransition;
 
   return (
     <animated.div style={transition}>

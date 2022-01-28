@@ -23,7 +23,7 @@ function App() {
     },
     typography: {
       fontFamily: [
-        "Rajdhani",
+        "Poppins",
         "Roboto",
         '"Helvetica"',
         "Arial",
@@ -43,13 +43,28 @@ function App() {
 
   const [nav, setNav] = useState(0);
 
+  const [aboutTrans, setAboutTrans] = useState(true);
+  const [skillTrans, setSkillTrans] = useState(true);
+  const [projectTrans, setProjectTrans] = useState(true);
+
+  React.useEffect(() => {
+    nav > 1 && setAboutTrans(false);
+    nav < 1 && setAboutTrans(true);
+
+    nav > 2 && setSkillTrans(false);
+    nav < 2 && setSkillTrans(true);
+
+    nav > 3 && setProjectTrans(false);
+    nav < 3 && setProjectTrans(true);
+  }, [nav]);
+
   return (
     <ThemeProvider theme={theme}>
-      <Navbar setNav={setNav} />
+      <Navbar setNav={setNav} nav={nav} />
       {nav === 0 && <Main />}
-      {nav === 1 && <About />}
-      {nav === 2 && <Skills />}
-      {nav === 3 && <Projects />}
+      {nav === 1 && <About nav={aboutTrans} />}
+      {nav === 2 && <Skills nav={skillTrans} />}
+      {nav === 3 && <Projects nav={projectTrans} />}
       {nav === 4 && <ContactMe />}
     </ThemeProvider>
   );

@@ -5,11 +5,16 @@ import styles from "./about.module.css";
 
 import person from "../../images/person.svg";
 
-const About = () => {
-  const transition = useSpring({
+const About = ({ nav }) => {
+  const forwardTransition = useSpring({
     transform: "translateX(0%)",
-    from: { transform: "translateX(30%)" },
+    from: { transform: "translateX(50%)" },
   });
+  const backwardTransition = useSpring({
+    transform: "translateX(0%)",
+    from: { transform: "translateX(-50%)" },
+  });
+  const transition = !nav ? backwardTransition : forwardTransition;
 
   return (
     <animated.div style={transition}>
@@ -17,12 +22,26 @@ const About = () => {
         <div className={styles.sub_container}>
           <h2> About Me </h2>
           <p>
-            Aut duis senserit relinqueret, officia ut amet. Quibusdam esse
-            officia iudicem iis anim appellat sed illum labore.A ullamco
-            concursionibus, an duis cernantur praetermissum.Export nescius
-            ullamco ea si duis officia concursionibus.Probant sed sint, ita esse
-            o irure.Commodo minim est pariatur graviterque, et quis ubi
-            sint.Quamquam non sint non de nisi multos tamen appellat.{" "}
+            I am a Full Stack Web Developer specializing in MERN based
+            architectures and a certified Ethical Hacker / Pen Tester.
+            <br />
+            <br />I have fun in both the professions I have taken up and that
+            gives me an edge over most people. <br /> <br />I run a small{" "}
+            <a
+              href="https://www.instagram.com/just_another_cinema_buff/"
+              target="_blank"
+              title="just_another_cinema_buff"
+            >
+              movie page
+            </a>{" "}
+            on Instagram as a hobby and am also part of a podcast called{" "}
+            <a
+              href="https://www.youtube.com/channel/UCkUuVjmwH40NvTLeIQamvBA"
+              target="_blank"
+              title="The Seamen Youtube Channel"
+            >
+              The Seamen.
+            </a>
           </p>
         </div>
         <img src={person} />

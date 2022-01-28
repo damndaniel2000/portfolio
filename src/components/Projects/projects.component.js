@@ -1,19 +1,57 @@
 import React, { useRef } from "react";
+import { animated, useSpring } from "react-spring";
 
 import styles from "./projects.module.css";
 
-const FollowCarousel = (props) => {
+import artemis from "../../images/artemis.png";
+import bombayjesuits from "../../images/bombayjesuits.png";
+import wollof from "../../images/wollof.png";
+import todo from "../../images/todo-list.png";
+
+const projects = [
+  {
+    img: artemis,
+    title: "Artemis",
+    description: "An Uber-like ambulance booking service.",
+    video: "link",
+  },
+  {
+    img: bombayjesuits,
+    title: "Bombay Jesuits Today",
+    description:
+      "  A website made for the Bombay Jesuits to upload blogs and videos to continue reaching out to the community during the pandemic.",
+    live: "link",
+  },
+  {
+    img: wollof,
+    title: "Wollof",
+    description:
+      "A tracking application for senior citizens and children who due to some medical condition or other reason can't take responsibility of their whereabouts.",
+    video: "link",
+  },
+  {
+    img: todo,
+    title: "To-Do List",
+    description:
+      "A to-do list made as an assignment for the selection of a company.",
+    live: "link",
+  },
+];
+
+const FollowCarousel = ({ nav }) => {
   const container = useRef();
 
   const [divId, setDiv] = React.useState(null);
 
-  const carouselImages = [
-    "https://www.pixel4k.com/wp-content/uploads/2020/08/dark-batman_1596915655.jpg",
-    "https://www.pixel4k.com/wp-content/uploads/2020/08/dark-batman_1596915655.jpg",
-    "https://www.pixel4k.com/wp-content/uploads/2020/08/dark-batman_1596915655.jpg",
-  ].map((img) => {
-    return <img src={img} className={styles.img} alt="carousel" key={img} />;
+  const forwardTransition = useSpring({
+    transform: "translateX(0%)",
+    from: { transform: "translateX(50%)" },
   });
+  const backwardTransition = useSpring({
+    transform: "translateX(0%)",
+    from: { transform: "translateX(-50%)" },
+  });
+  const transition = nav ? forwardTransition : backwardTransition;
 
   const leftScroll = () => {
     container.current.scrollLeft += 500;
@@ -53,74 +91,34 @@ const FollowCarousel = (props) => {
 
   return (
     <>
-      <section ref={container} id="projects" className={styles.container}>
-        <div className={styles.box}>
-          <img
-            src="https://www.pixel4k.com/wp-content/uploads/2020/08/dark-batman_1596915655.jpg"
-            alt="project"
-          />
-          <h2> Artemis </h2>
-          <p>
-            Arbitror illum ut ullamco adipisicing ut nescius est excepteur.Ipsum
-            consequat consectetur ad laborum eu fore.
-          </p>
-          <button> Code </button>
+      <animated.div style={transition}>
+        <section ref={container} id="projects" className={styles.container}>
+          {projects.map((item, index) => (
+            <div className={styles.box}>
+              <img src={item.img} alt="project" />
+              <h2> {item.title} </h2>
+              <p>{item.description}</p>
+              <div className={styles.button_group}>
+                <div className={`${styles.button} ${styles.button_6}`}>
+                  <div className={styles.spin}></div>
+                  <a href="#">Description</a>
+                </div>
+                <div className={`${styles.button} ${styles.button_6}`}>
+                  <div className={styles.spin}></div>
+                  <a href="#">{item.video ? "Video" : "Live"}</a>
+                </div>
+                <div className={`${styles.button} ${styles.button_6}`}>
+                  <div className={styles.spin}></div>
+                  <a href="#">Code</a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </section>
+        <div className={styles.scroll_container}>
+          <div className={styles.scroll}>Drag To View More ></div>
         </div>
-        <div className={styles.box}>
-          <img
-            src="https://www.pixel4k.com/wp-content/uploads/2020/08/dark-batman_1596915655.jpg"
-            alt="project"
-          />
-          <p>
-            Doctrina domesticarum non mandaremus aut quid ita eiusmod.Cillum aut
-            consequat, elit quamquam ita export ipsum.Minim cupidatat o cillum
-            quorum nam consequat minim ipsum pariatur noster.Dolor relinqueret
-            probant sint pariatur, qui laboris qui ullamco.
-          </p>
-          <button> Github </button>
-        </div>
-        <div className={styles.box}>
-          <img
-            src="https://www.pixel4k.com/wp-content/uploads/2020/08/dark-batman_1596915655.jpg"
-            alt="project"
-          />
-          <p>
-            Doctrina domesticarum non mandaremus aut quid ita eiusmod.Cillum aut
-            consequat, elit quamquam ita export ipsum.Minim cupidatat o cillum
-            quorum nam consequat minim ipsum pariatur noster.Dolor relinqueret
-            probant sint pariatur, qui laboris qui ullamco.
-          </p>
-          <button> Github </button>
-        </div>
-        <div className={styles.box}>
-          <img
-            src="https://www.pixel4k.com/wp-content/uploads/2020/08/dark-batman_1596915655.jpg"
-            alt="project"
-          />
-          <h2> Artemis </h2>
-          <p>
-            Arbitror illum ut ullamco adipisicing ut nescius est excepteur.Ipsum
-            consequat consectetur ad laborum eu fore.
-          </p>
-          <button> Github </button>
-        </div>
-        <div className={styles.box}>
-          <img
-            src="https://www.pixel4k.com/wp-content/uploads/2020/08/dark-batman_1596915655.jpg"
-            alt="project"
-          />
-          <p>
-            Doctrina domesticarum non mandaremus aut quid ita eiusmod.Cillum aut
-            consequat, elit quamquam ita export ipsum.Minim cupidatat o cillum
-            quorum nam consequat minim ipsum pariatur noster.Dolor relinqueret
-            probant sint pariatur, qui laboris qui ullamco.
-          </p>
-          <button> Github </button>
-        </div>
-      </section>
-      <div className={styles.scroll_container}>
-        <div className={styles.scroll}>Drag To View More Photos ></div>
-      </div>
+      </animated.div>
     </>
   );
 };
