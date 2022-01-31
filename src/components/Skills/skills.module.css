@@ -26,11 +26,14 @@
   background: #172036;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 850px) {
   .container {
     width: 95%;
     margin-top: 2rem;
   }
+}
+
+@media only screen and (max-width: 550px) {
   .box img {
     width: 80px;
   }
@@ -41,5 +44,16 @@
     margin-bottom: 1rem;
     width: 30%;
     padding: 1rem 0;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .container {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 3840px) {
+  .container {
+    width: 30%;
   }
 }

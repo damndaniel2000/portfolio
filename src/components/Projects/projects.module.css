@@ -29,6 +29,8 @@
 }
 .box p {
   white-space: pre-wrap;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .scroll_container {
@@ -111,4 +113,49 @@
 
 .button_6:hover a {
   color: #fff;
+}
+
+@media only screen and (max-width: 850px) {
+  .box {
+    width: 65%;
+    height: 600px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .box {
+    width: 75%;
+    height: 450px;
+  }
+  .box img {
+    height: 200px;
+  }
+  .box p {
+    font-size: 14px;
+  }
+  .box h2 {
+    font-size: 20px;
+  }
+
+  .button {
+    margin: 1rem 5px;
+    width: 70px;
+    font-size: 7px;
+    letter-spacing: 0.5px;
+  }
+  .scroll {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .box {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 3840px) {
+  .box {
+    width: 20%;
+  }
 }

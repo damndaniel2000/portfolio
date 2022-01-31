@@ -65,6 +65,12 @@
   transform: rotateX(90deg);
 }
 
+@media screen and (max-width: 850px) {
+  .sub_container {
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: 550px) {
   .sub_container {
     width: 350px;

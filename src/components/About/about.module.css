@@ -27,11 +27,17 @@
   text-decoration: none;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 850px) {
   .container {
     flex-direction: column;
     width: 95%;
   }
+  .sub_container {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
   .sub_container {
     width: 100%;
   }
@@ -45,5 +51,17 @@
   .container img {
     width: 300px;
     height: 300px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .container {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 3840px) {
+  .container {
+    width: 30%;
   }
 }

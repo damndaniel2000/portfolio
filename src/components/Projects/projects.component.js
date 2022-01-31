@@ -12,29 +12,34 @@ const projects = [
   {
     img: artemis,
     title: "Artemis",
-    description: "An Uber-like ambulance booking service.",
+    description:
+      "An Uber-like ambulance booking service. (Live not available as Google Maps API Key required)",
     video: "link",
+    code: "https://github.com/damndaniel2000/artemis",
   },
   {
     img: bombayjesuits,
     title: "Bombay Jesuits Today",
     description:
-      "  A website made for the Bombay Jesuits to upload blogs and videos to continue reaching out to the community during the pandemic.",
-    live: "link",
+      "A website made for the Bombay Jesuits to upload blogs and videos to continue reaching out to the community during the pandemic.",
+    live: "https://bombayjesuitstoday.herokuapp.com/",
+    code: "https://github.com/damndaniel2000/bombayjesuitstoday",
   },
   {
     img: wollof,
     title: "Wollof",
     description:
-      "A tracking application for senior citizens and children who due to some medical condition or other reason can't take responsibility of their whereabouts.",
+      "A tracking application for senior citizens and children who due to some medical condition or other reason can't take responsibility of their whereabouts. (same issues as Artemis)",
     video: "link",
+    code: "https://github.com/damndaniel2000/wollof",
   },
   {
     img: todo,
     title: "To-Do List",
     description:
       "A to-do list made as an assignment for the selection of a company.",
-    live: "link",
+    live: "https://damndaniel2000-todo.herokuapp.com/",
+    code: "https://github.com/damndaniel2000/to-do-app",
   },
 ];
 
@@ -101,15 +106,15 @@ const FollowCarousel = ({ nav }) => {
               <div className={styles.button_group}>
                 <div className={`${styles.button} ${styles.button_6}`}>
                   <div className={styles.spin}></div>
-                  <a href="#">Description</a>
+                  <a href={item.video ? item.video : item.live} target="_blank">
+                    {item.video ? "Video" : "Live"}
+                  </a>
                 </div>
                 <div className={`${styles.button} ${styles.button_6}`}>
                   <div className={styles.spin}></div>
-                  <a href="#">{item.video ? "Video" : "Live"}</a>
-                </div>
-                <div className={`${styles.button} ${styles.button_6}`}>
-                  <div className={styles.spin}></div>
-                  <a href="#">Code</a>
+                  <a href={item.code} target="_blank">
+                    Code
+                  </a>
                 </div>
               </div>
             </div>
