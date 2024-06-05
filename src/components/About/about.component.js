@@ -22,15 +22,18 @@ const About = ({ nav }) => {
         <div className={styles.sub_container}>
           <h2> About Me </h2>
           <p>
-            I am a Full Stack Web Developer specializing in MERN based
+            I am a Full Stack Web Developer with almost{" "}
+            <b>4 years of experience</b> specializing in MERN based
             architectures and a certified Ethical Hacker / Pen Tester.
             <br />
             <br />I have fun in both the professions I have taken up and that
-            gives me an edge over most people. <br /> <br />I run a small{" "}
+            gives me an edge over most people. <br /> <br />I am currently
+            training to become a mixed martial artist. I also run a small{" "}
             <a
               href="https://www.instagram.com/just_another_cinema_buff/"
               target="_blank"
               title="just_another_cinema_buff"
+              rel="noreferrer"
             >
               movie page
             </a>{" "}
@@ -39,12 +42,16 @@ const About = ({ nav }) => {
               href="https://www.youtube.com/channel/UCkUuVjmwH40NvTLeIQamvBA"
               target="_blank"
               title="The Seamen Youtube Channel"
+              rel="noreferrer"
             >
               The Seamen.
             </a>
           </p>
         </div>
-        <img src={person} />
+        <img
+          src={person}
+          alt="person"
+        />
       </div>
     </animated.div>
   );

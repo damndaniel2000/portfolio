@@ -61,12 +61,10 @@ const Home = () => {
             </IconButton>
           </div>
           <a
-            onClick={() =>
-              window.open(
-                "https://drive.google.com/file/d/1-z8edmJAqYjmifyyxo9HjWBJN7PAjwHg/view?usp=sharing"
-              )
-            }
+            href="https://drive.google.com/file/d/1gg6tm2BYhSWOpb8IeIOe-_bou-t0Xm5a/view?usp=drive_link"
             className={styles.rotate_button}
+            target="_blank"
+            rel="noreferrer"
           >
             <span className={styles.rotate_button_face}>Resume</span>
             <span className={styles.rotate_button_face_back}>Open</span>
